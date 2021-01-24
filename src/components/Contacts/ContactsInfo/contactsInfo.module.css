@@ -1,0 +1,42 @@
+.contactsContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0 50px 0;
+    background-color: #c4c4c4;
+}
+
+.contactsInfo{
+    flex-grow: 1;
+    background-color: #999999;
+    flex-basis: 60%;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer img{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 600px){
+    .contactsContainer{
+        flex-direction: column;
+    }
+    .contactsInfo{
+        flex-grow: 3;
+        flex-basis: 100%;
+    }
+}

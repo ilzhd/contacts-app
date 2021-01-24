@@ -1,0 +1,129 @@
+.app{
+  box-sizing: border-box;
+  display: grid;
+  width: 1200px;
+  margin: 0 auto;
+  grid-template-areas:
+    "h h"
+    'c i';
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 4fr 8fr;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+}
+
+.header {
+  grid-area: h;
+  background-color: #c4c4c4;
+}
+
+.contactsContainer{
+  background-color: #fffafa;
+}
+
+.contacts{
+  grid-area: c;
+  height:400px; /* высота нашего блока */
+  border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+  overflow-x: scroll; /* прокрутка по горизонтали */
+  overflow-y: scroll; /* прокрутка по вертикали */
+
+}
+
+.item{
+  border: 1px #000000;
+  font-size: 18px;
+  border-style: solid none none;
+}
+.contactsInfo{
+  grid-area: i;
+  background-color: #ffffff;
+}
+.imageContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer img{
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+}
+
+.contactsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.items{
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  padding-left: 50px;
+}
+
+.a{
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.active div{
+  background-color: #61dafb;
+}
+.search{
+  width: 400px;
+}
+
+@media (max-width: 800px){
+  .app{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+    "h h"
+    'c i';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 6fr;
+  }
+  .header{
+    font-size: 18px;
+  }
+  .search{
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px){
+  .app{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-areas:
+    "h h"
+    'c i';
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 1fr;
+  }
+  .header{
+    font-size: 18px;
+  }
+  .search{
+    width: 100%;
+  }
+  .contactsInfo{
+    margin-left: 0;
+    background-color: #fff;
+    position: absolute;
+    left: -120% ;
+    top: 0;
+    width: 100%;
+    transition: all .5s;
+  }
+  .contactsInfoActive{
+    left: 0;
+  }
+  .item{
+    font-size: 18px;
+  }
+
+}

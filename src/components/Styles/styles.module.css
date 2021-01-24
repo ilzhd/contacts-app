@@ -1,0 +1,66 @@
+.app{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.appFlex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactsContainer{
+    flex-grow: 1;
+    background-color: #fffafa;
+}
+
+.search{
+    display: flex;
+    flex-grow:1
+}
+
+.header {
+    background-color: #000000;
+    margin-bottom: 10px;
+}
+.header p{
+    padding: 10px 0 0 10px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.contacts{
+    height:500px; /* высота нашего блока */
+    border: 1px solid #C1C1C1; /* размер и цвет границы блока */
+    overflow-x: scroll; /* прокрутка по горизонтали */
+    overflow-y: scroll; /* прокрутка по вертикали */
+
+}
+
+.a{
+    color: black;
+    text-decoration: none;
+}
+
+.active li{
+    background-color: #61dafb;
+    text-decoration: none;
+
+}
+@media (max-width: 600px){
+    .reset{
+        display: none;
+    }
+    .appFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header p{
+        padding: 5px 0 0 10px;
+        color: #ffffff;
+        font-size: 22px;
+    }
+}
+
+
